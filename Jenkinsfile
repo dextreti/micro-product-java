@@ -4,6 +4,7 @@ pipeline {
     tools {
         // Este nombre debe ser IGUAL al que pusiste en tu captura (Maven3)
         maven 'Maven3'
+	jdk 'Java21'
     }
 
     stages {
