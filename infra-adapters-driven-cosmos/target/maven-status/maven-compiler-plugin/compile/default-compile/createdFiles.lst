@@ -1,0 +1,14 @@
+com/catalog/repository/ICosmosProductRepository.class
+com/catalog/entity/ProductLog.class
+com/catalog/adapter/CategoryCosmosAdapter.class
+com/catalog/entity/ProductLog$ProductLogBuilder.class
+com/catalog/repository/ICosmosCategoryRepository.class
+com/catalog/mapper/IProductCosmoMapperImpl.class
+com/catalog/entity/Product.class
+com/catalog/mapper/ICategoryCosmoMapperImpl.class
+com/catalog/entity/Category.class
+com/catalog/adapter/ProductCosmosAdapter.class
+com/catalog/mapper/ICategoryCosmoMapper.class
+com/catalog/entity/Product$ProductBuilder.class
+com/catalog/mapper/IProductCosmoMapper.class
+com/catalog/config/CosmosClientConfig.class

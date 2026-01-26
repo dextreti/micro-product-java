@@ -1,0 +1,9 @@
+/home/dextre/Developer/Java/product-service/domain/src/main/java/com/catalog/agregates/CategoryDomain.java
+/home/dextre/Developer/Java/product-service/domain/src/main/java/com/catalog/agregates/ProductDomain.java
+/home/dextre/Developer/Java/product-service/domain/src/main/java/com/catalog/common/abstractions/IGenericConsumer.java
+/home/dextre/Developer/Java/product-service/domain/src/main/java/com/catalog/common/abstractions/IGenericMapper.java
+/home/dextre/Developer/Java/product-service/domain/src/main/java/com/catalog/common/abstractions/IGenericRepository.java
+/home/dextre/Developer/Java/product-service/domain/src/main/java/com/catalog/common/abstractions/Result.java
+/home/dextre/Developer/Java/product-service/domain/src/main/java/com/catalog/events/OrderCreatedEvent.java
+/home/dextre/Developer/Java/product-service/domain/src/main/java/com/catalog/ports/out/ICategoryRepository.java
+/home/dextre/Developer/Java/product-service/domain/src/main/java/com/catalog/ports/out/IProductRepository.java

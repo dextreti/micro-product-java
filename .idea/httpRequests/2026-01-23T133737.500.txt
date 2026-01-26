@@ -1,0 +1,1 @@
+Internal error: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.catalog.entity.Product#d80cf25e-349a-41d1-bb5b-046dfec11fe8]

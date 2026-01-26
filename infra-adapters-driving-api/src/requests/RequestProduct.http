@@ -1,0 +1,68 @@
+### Obtener todos los productos
+GET http://localhost:8080/api/product
+
+### Crear un producto
+POST http://localhost:8080/api/product
+Content-Type: application/json
+
+{
+    "id": "",
+    "categoryId": "f7cc4fc8-1b9b-4272-a36b-55e9d3c4892c",
+    "name": "primer Producto",
+    "description": "Prueba desde archivo .http",
+    "price": 75.0,
+    "stock": 10,
+    "imageUrl": "http://imagen.com/prod2.jpg"
+}
+### PUT
+PUT http://localhost:8080/api/product/e77b1f06-1f5b-4d7b-8617-cac0d85a24d2
+Content-Type: application/json
+
+{
+"name": "Producto Actualizado",
+"description": "Edición exitosa con Batch y Logs",
+"price": 85.0,
+"stock": 5,
+"imageUrl": "http://imagen.com/prod2-nuevo.jpg",
+"categoryId": "e01ca94a-f257-4ad6-8bf1-61907d3bc6cc"
+}
+
+### Actualizar Segundo Producto
+POST http://localhost:8080/api/product/e77b1f06-1f5b-4d7b-8617-cac0d85a24d2
+Content-Type: application/json
+
+{
+  "name": "Producto Actualizado",
+  "description": "Edición exitosa con Batch y Logs",
+  "price": 85.0,
+  "stock": 5,
+  "imageUrl": "http://imagen.com/prod2-nuevo.jpg",
+  "categoryId": "e01ca94a-f257-4ad6-8bf1-61907d3bc6cc"
+}
+
+### Actualizar producto en CosmosDB
+POST http://localhost:8080/products/b20e5bc2-f018-42dc-99f7-096ceab0268f
+Content-Type: application/json
+
+{
+  "name": "Producto Real Actualizado",
+  "description": "Descripción editada desde el endpoint de actualización",
+  "price": 55.50,
+  "stock": 15,
+  "imageUrl": "http://imagen.com/prod-nueva.jpg",
+  "categoryId": "268eec12-6275-433f-abf5-b2bd50e32381"
+}
+
+### Crear Categoría: Electrónica
+POST http://localhost:8080/api/category
+Content-Type: application/json
+
+{
+    "id": "",
+    "name": "abarrotes",
+    "description": "cereales, harinas"
+}
+
+
+
+

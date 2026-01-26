@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13ce32ba-c5c5-4b99-a6a6-ba378dc7bec0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="38cvkOMdCuDPzTAAAMMUIobtSpl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ProductApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "HTTP Request.RequestProduct | Actualizar Segundo Producto.executor": "Run",
+    "HTTP Request.RequestProduct | Crear Categoría: Electrónica.executor": "Run",
+    "HTTP Request.RequestProduct | Crear un producto.executor": "Run",
+    "HTTP Request.RequestProduct | PUT.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.ProductApplication.executor": "Debug",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "full.screen.before.presentation.mode": "false",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/dextre/Developer/Java/product-service/infra-adapters-driving-kafka/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.112125166",
+    "project.structure.side.proportion": "0.39603233",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/infra-adapters-driving-kafka/src/main/resources" />
+      <recent name="$PROJECT_DIR$/infra-adapters-driving-api/src/main/resources" />
+      <recent name="$PROJECT_DIR$/infra-adapters-driven-cosmos/src/main/resources" />
+      <recent name="$PROJECT_DIR$/infra-adapters-driving-api/src/requests" />
+      <recent name="$PROJECT_DIR$/infra-adapters-driving-kafka/src/main/java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/infra-adapters-driving-kafka/src/main/resources" />
+      <recent name="$PROJECT_DIR$/application/src/main/java" />
+      <recent name="$PROJECT_DIR$/application/src" />
+      <recent name="$PROJECT_DIR$/infra-adapters-driving-api/src/main/java" />
+      <recent name="$PROJECT_DIR$/infra-adapters-driving-api/src/main/java/controllers" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.catalog.middleware" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13ce32ba-c5c5-4b99-a6a6-ba378dc7bec0" name="Changes" comment="" />
+      <created>1769111817962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769111817962</updated>
+      <workItem from="1769111825624" duration="2120000" />
+      <workItem from="1769114000555" duration="824000" />
+      <workItem from="1769114866690" duration="17975000" />
+      <workItem from="1769172096390" duration="153000" />
+      <workItem from="1769172274814" duration="2783000" />
+      <workItem from="1769175178335" duration="46000" />
+      <workItem from="1769175377019" duration="563000" />
+      <workItem from="1769175945971" duration="3112000" />
+      <workItem from="1769179085690" duration="12174000" />
+      <workItem from="1769195324146" duration="19956000" />
+      <workItem from="1748762585740" duration="3215000" />
+      <workItem from="1769257204427" duration="6799000" />
+      <workItem from="1769264504001" duration="10898000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/application/src/main/java/com/catalog/usecases/updateproduct/UpdateProductHandler.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

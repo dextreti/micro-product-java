@@ -1,0 +1,8 @@
+/home/dextre/Developer/Java/product-service/infra-adapters-driven-sqlLite/src/main/java/com/catalog/adapter/CategorySqlLiteAdapter.java
+/home/dextre/Developer/Java/product-service/infra-adapters-driven-sqlLite/src/main/java/com/catalog/adapter/ProductSqlLiteAdapter.java
+/home/dextre/Developer/Java/product-service/infra-adapters-driven-sqlLite/src/main/java/com/catalog/entity/Category.java
+/home/dextre/Developer/Java/product-service/infra-adapters-driven-sqlLite/src/main/java/com/catalog/entity/Product.java
+/home/dextre/Developer/Java/product-service/infra-adapters-driven-sqlLite/src/main/java/com/catalog/mapper/ICategorySqlLiteMapper.java
+/home/dextre/Developer/Java/product-service/infra-adapters-driven-sqlLite/src/main/java/com/catalog/mapper/IProductSqlLiteMapper.java
+/home/dextre/Developer/Java/product-service/infra-adapters-driven-sqlLite/src/main/java/com/catalog/repository/ICategorySqlLiteRepository.java
+/home/dextre/Developer/Java/product-service/infra-adapters-driven-sqlLite/src/main/java/com/catalog/repository/IProductSqlLiteRepository.java
