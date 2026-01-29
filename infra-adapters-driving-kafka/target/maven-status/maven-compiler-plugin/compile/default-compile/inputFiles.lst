@@ -1,4 +1,0 @@
-/home/dextre/Developer/Java/product-service/infra-adapters-driving-kafka/src/main/java/com/catalog/ProductApplication.java
-/home/dextre/Developer/Java/product-service/infra-adapters-driving-kafka/src/main/java/com/catalog/config/SerializationConfig.java
-/home/dextre/Developer/Java/product-service/infra-adapters-driving-kafka/src/main/java/com/catalog/listerners/ProductEventListener.java
-/home/dextre/Developer/Java/product-service/infra-adapters-driving-kafka/src/main/java/com/catalog/middleware/GlobalExceptionListener.java

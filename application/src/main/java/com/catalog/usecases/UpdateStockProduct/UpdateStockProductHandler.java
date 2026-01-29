@@ -1,5 +1,8 @@
 package com.catalog.usecases.UpdateStockProduct;
 
+import com.catalog.dtos.OrderItemResponse;
+import com.catalog.dtos.OrderResponse;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +10,7 @@ import com.catalog.agregates.ProductDomain;
 import com.catalog.common.abstractions.Result;
 import lombok.AllArgsConstructor;
 import com.catalog.ports.out.IProductRepository;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 
 @Service
@@ -16,61 +20,38 @@ public class UpdateStockProductHandler implements IUpdateStockProductUseCase {
     private final IProductRepository productRepository;
 
     @Override
-    public Result<String> execute(UpdateStockProductCommand command) {
+    @Transactional
+    public Result<String> execute(OrderResponse order) {
 
-        ProductDomain product = productRepository.findById(command.productId()).orElse(null);
+        for (OrderItemResponse item : order.purchaseOrderItems()) {
 
-        if (product == null) {
-            return Result.failure("Producto no encontrado");
+            ProductDomain product = productRepository.findById(item.productId().toString()).orElseThrow();
+
+            if (product == null ) {
+                TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+                //aqui se deberia implementar un notificationPort notificar a .net api  "Producto no encontrado: " + item.productId()
+                return Result.failure("Orden cancelada");
+            }
+
+            Result<Void> result = product.updateStock(item.quantity());
+
+            if (!result.isSuccess()) {
+                //aqui se deberia implementar un notificationPort a la api de .net "Sin stock: " + result.getError()
+                return Result.failure("Sin stock suficiente");
+            }
+
+            productRepository.save(product);
         }
-
-        Result<Void> validationResult = product.updateStock(command.quantity());
-
-        if (!validationResult.isSuccess()) {
-            return Result.failure(validationResult.getError());
-        }
-
-        productRepository.save(product);
-
-        return Result.success(product.getId());
+        return Result.success(order.id().toString());
 
     }
 
 }
 
-//@Service
-//// Quitamos @AllArgsConstructor para controlar la inyección manualmente
-//public class UpdateStockProductHandler implements IUpdateStockProductUseCase {
-//
-//    private final IProductRepository productRepository;
-//
-//    // Adaptación: Inyectamos el repositorio pero le decimos a Spring que NO es obligatorio
-//    public UpdateStockProductHandler(@Autowired(required = false) IProductRepository productRepository) {
-//        this.productRepository = productRepository;
-//    }
-//
-//    @Override
-//    public Result<String> execute(UpdateStockProductCommand command) {
-//        // Validación de seguridad: si no hay repositorio, no podemos hacer nada
-//        if (productRepository == null) {
-//            System.out.println("LOG: No hay un adaptador de base de datos configurado.");
-//            return Result.failure("Servicio de persistencia no disponible");
-//        }
-//
-//        ProductDomain product = productRepository.findById(command.productId()).orElse(null);
-//
-//        if (product == null) {
-//            return Result.failure("Producto no encontrado");
-//        }
-//
-//        Result<Void> validationResult = product.updateStock(command.quantity());
-//
-//        if (!validationResult.isSuccess()) {
-//            return Result.failure(validationResult.getError());
-//        }
-//
-//        productRepository.save(product);
-//
-//        return Result.success(product.getId());
-//    }
-//}
+//public record StockNotificationResponse(
+//        UUID orderId,
+//        String status,      // "SUCCESS" o "FAILURE"
+//        String message,     // "Insufficient stock for product X"
+//        String serviceName  // "catalog-service-java"
+//) {}
+

@@ -1,4 +1,0 @@
-com/catalog/ProductApplication.class
-com/catalog/middleware/GlobalExceptionListener.class
-com/catalog/config/SerializationConfig.class
-com/catalog/listerners/ProductEventListener.class

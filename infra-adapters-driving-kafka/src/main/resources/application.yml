@@ -1,0 +1,29 @@
+spring:
+  config:
+    import: optional:classpath:sqlite.properties
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+
+
+order:
+  service:
+    url: http://localhost:5206
+
+
+
+
+logging:
+  file:
+    name: logs/app.log
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    com.catalog: INFO
+    org.springframework: WARN
+    org.hibernate: WARN
+    org.apache.kafka: WARN
+    com.zaxxer.hikari: WARN
