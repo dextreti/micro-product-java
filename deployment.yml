@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: product-service
-        image: dextre78/micro-product:latest
+        image: dextre78/micro-product-java:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
