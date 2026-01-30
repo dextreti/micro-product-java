@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: product-service
-        image: micro-product:latest
-        imagePullPolicy: Never # Usa la imagen cargada manualmente
+        image: dextre78/micro-product:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         volumeMounts:
