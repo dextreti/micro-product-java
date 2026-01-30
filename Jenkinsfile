@@ -1,30 +1,38 @@
 pipeline {
     agent any
-
+    
     tools {
-        // Este nombre debe ser IGUAL al que pusiste en tu captura (Maven3)
         maven 'Maven3'
-	jdk 'Java21'
+        jdk 'Java21'
+    }
+
+    environment {
+        KUBECONFIG = '/var/jenkins_home/.kube/config'
     }
 
     stages {
-        stage('Preparación') {
+        stage('Build Artifact') {
             steps {
-                echo 'Limpiando entorno...'
-                sh 'mvn clean'
+                sh 'mvn clean package -DskipTests'
             }
         }
-        stage('Compilación y Tests') {
+        stage('Docker Build') {
             steps {
-                echo 'Compilando proyecto Java...'
-                // Ejecutamos el build
-                sh 'mvn install -DskipTests'
+                // El nombre de la imagen debe coincidir con tu deployment.yml
+                sh 'docker build -t micro-product-java:latest .'
             }
         }
-        stage('Verificación Docker') {
+        stage('Load Image to Minikube') {
             steps {
-                // Solo para verificar que Jenkins puede usar Docker de tu Debian
-                sh 'docker --version'
+                // kube vea la imagen local
+                sh 'minikube image load micro-product-java:latest'
+            }
+        }
+        stage('Deploy to K8s') {
+            steps {
+                sh 'kubectl apply -f deployment.yml'
+                // Forzamos el reinicio para que use la nueva compilación
+                sh 'kubectl rollout restart deployment product-service'
             }
         }
     }

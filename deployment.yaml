@@ -15,8 +15,17 @@ spec:
       containers:
       - name: product-service
         image: micro-product:latest
+        imagePullPolicy: Never # Usa la imagen cargada manualmente
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - name: sqlite-data
+          mountPath: /app/database # La ruta donde Java busca el .db
+      volumes:
+      - name: sqlite-data
+        hostPath:
+          path: /data/product-db # Carpeta física en tu Debian donde estará el archivo
+          type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: Service
