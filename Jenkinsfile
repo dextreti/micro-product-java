@@ -18,6 +18,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
+		echo 'Construyendo imagen con el nuevo Dockerfile...'
                 // El nombre de la imagen debe coincidir con tu deployment.yml
                 sh 'docker build -t micro-product-java:latest .'
             }
