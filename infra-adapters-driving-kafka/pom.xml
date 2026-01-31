@@ -14,15 +14,15 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Usa la versión compatible con Spring Boot 3.4.x -->
+    
         <spring-boot.version>3.4.1</spring-boot.version>
         <spring-cloud.version>2024.0.3</spring-cloud.version> <!-- ¡Crítico! -->
     </properties>
 
-    <!-- Importa los BOMs para gestión automática de versiones -->
+    
     <dependencyManagement>
         <dependencies>
-            <!-- Spring Boot BOM -->
+            
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -30,7 +30,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Spring Cloud BOM -->
+            
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -48,11 +48,10 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!-- ✅ Sin versión explícita: gestionado por BOM -->
+        
         <dependency>
             <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-            <!-- Versión gestionada por Spring Boot BOM -->
+            <artifactId>spring-kafka</artifactId>        
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -61,49 +60,49 @@
             </exclusions>
         </dependency>
 
-        <!-- ✅ Jackson gestionado por Spring Boot -->
+        
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <!-- Sin versión: Spring Boot 3.4.1 usa 2.18.x -->
+            
         </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
-            <!-- Versión gestionada por Spring Boot BOM -->
+            
         </dependency>
 
-        <dependency>
+       <dependency>
             <groupId>com.catalog</groupId>
-            <artifactId>infra-adapters-driven-sqlLite</artifactId>
+            <artifactId>infra-adapters-driven-postgresql</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
-        <!-- ✅ Spring Cloud gestionado por BOM -->
+        
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <!-- Sin versión -->
+        
         </dependency>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
-            <!-- Sin versión -->
+        
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
-        </dependency>      
+        </dependency>     
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency> 
 
     </dependencies>
 
