@@ -1,6 +1,8 @@
 package com.catalog.entities;
 
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -17,7 +19,7 @@ public class Product {
     
     public String description;       
     
-    public Double price; 
+    public BigDecimal price; 
     
     public Integer stock;
     
