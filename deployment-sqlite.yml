@@ -18,21 +18,21 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        
-        env:
-        - name: QUARKUS_DATASOURCE_JDBC_URL
-          value: "jdbc:postgresql://postgres:5432/postgres?currentSchema=catalog"
-        - name: QUARKUS_DATASOURCE_USERNAME
-          value: "appuser"
-        - name: QUARKUS_DATASOURCE_PASSWORD
-          value: "secret" # lo pongo porque es solo una demo, de ninguna manera es recomendable poner las contraseñas en texto plano  
+        volumeMounts:
+        - name: sqlite-data
+          mountPath: /app/database # La ruta donde Java busca el .db
+      volumes:
+      - name: sqlite-data
+        hostPath:
+          path: /data/product-db # Carpeta física en tu Debian donde estará el archivo
+          type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: product-service
 spec:
-  type: NodePort 
+  type: NodePort
   selector:
     app: product-service
   ports:

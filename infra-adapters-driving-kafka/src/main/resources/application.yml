@@ -1,6 +1,6 @@
 spring:
   config:
-    import: optional:classpath:sqlite.properties
+    import: optional:classpath:postgresql.properties
   kafka:
     bootstrap-servers: kafka-service:9092
     consumer:
