@@ -1,11 +1,12 @@
 package com.catalog.repositories;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 import com.catalog.entities.Product;
 
-import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;
-import jakarta.enterprise.context.ApplicationScoped;
 
-@ApplicationScoped
-public class IProductPostgresRepository implements  PanacheRepositoryBase<Product, String> {
+@Repository
+public interface IProductPostgresRepository extends JpaRepository<Product, String> {
 
 }

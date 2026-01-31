@@ -6,8 +6,8 @@
     <packaging>pom</packaging> <modules>
     <module>domain</module>
     <module>application</module>
-    <!-- <module>infra-adapters-driven-cosmos</module> 
-    <module>infra-adapters-driven-sqlLite</module> -->
+    <!-- <module>infra-adapters-driven-cosmos</module>  -->
+    <!-- <module>infra-adapters-driven-sqlLite</module> -->
     <module>infra-adapters-driving-kafka</module>
     <module>infra-adapters-driving-api</module>
     <module>infra-adapters-driven-postgresql</module>

@@ -59,12 +59,6 @@ public class ProductSqlLiteAdapter implements IProductRepository  {
                 .map(productMapper::toDomain);
     }
 
-    @Override
-    public List<ProductDomain> findByCategoryId(String categoryId) {
-        return jpaRepository.findByCategoryId(categoryId)
-                .stream()
-                .map(productMapper::toDomain)
-                .collect(Collectors.toList());
-    }
+    
     
 }
