@@ -19,13 +19,17 @@ spec:
         ports:
         - containerPort: 8080
         
-        env:
-        - name: QUARKUS_DATASOURCE_JDBC_URL
-          value: "jdbc:postgresql://postgres:5432/postgres?currentSchema=catalog"
-        - name: QUARKUS_DATASOURCE_USERNAME
+        env:        
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:postgresql://postgres:5432/catalogs?currentSchema=product_catalog"
+        - name: SPRING_DATASOURCE_USERNAME
           value: "appuser"
-        - name: QUARKUS_DATASOURCE_PASSWORD
-          value: "secret" # lo pongo porque es solo una demo, de ninguna manera es recomendable poner las contraseñas en texto plano  
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: "secret"        
+        - name: SPRING_DATASOURCE_DRIVER_CLASS_NAME
+          value: "org.postgresql.Driver"        
+        - name: SPRING_JPA_PROPERTIES_HIBERNATE_DEFAULT_SCHEMA
+          value: "product_catalog"
 ---
 apiVersion: v1
 kind: Service
