@@ -17,7 +17,7 @@ public class Product {
     
     public String description;
     
-    @Column(name = "imageurl") 
+    @Column(name = "image_url")    
     public String imageUrl;
     
     public Double price; 
