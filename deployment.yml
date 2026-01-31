@@ -20,12 +20,14 @@ spec:
         - containerPort: 8080
         
       env:
-      - name: QUARKUS_DATASOURCE_JDBC_URL
+      - name: SPRING_DATASOURCE_URL
         value: "jdbc:postgresql://postgres-0.postgres:5432/catalogs?currentSchema=product_catalog"
-      - name: QUARKUS_DATASOURCE_USERNAME
+      - name: SPRING_DATASOURCE_USERNAME
         value: "appuser"
-      - name: QUARKUS_DATASOURCE_PASSWORD
+      - name: SPRING_DATASOURCE_PASSWORD
         value: "secret"
+      - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: "validate"
 ---
 apiVersion: v1
 kind: Service
