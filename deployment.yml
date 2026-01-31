@@ -21,7 +21,8 @@ spec:
         
         env:        
         - name: SPRING_DATASOURCE_URL
-          value: "jdbc:postgresql://postgres:5432/catalogs?currentSchema=product_catalog"
+          value: "jdbc:postgresql://postgres-0:5432/catalogs?currentSchema=product_catalog"
+          #value: "jdbc:postgresql://postgres-0.postgres:5432/catalogs?currentSchema=product_catalog"
         - name: SPRING_DATASOURCE_USERNAME
           value: "appuser"
         - name: SPRING_DATASOURCE_PASSWORD
