@@ -17,17 +17,16 @@ spec:
         image: dextre78/micro-product-java:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
-        
-      env:
-      - name: SPRING_DATASOURCE_URL
-        value: "jdbc:postgresql://postgres-0.postgres:5432/catalogs?currentSchema=product_catalog"
-      - name: SPRING_DATASOURCE_USERNAME
-        value: "appuser"
-      - name: SPRING_DATASOURCE_PASSWORD
-        value: "secret"
-      - name: SPRING_JPA_HIBERNATE_DDL_AUTO
-        value: "validate"
+        - containerPort: 8080        
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:postgresql://postgres-0.postgres:5432/catalogs?currentSchema=product_catalog"
+        - name: SPRING_DATASOURCE_USERNAME
+          value: "appuser"
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: "secret"
+        - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+          value: "validate"
 ---
 apiVersion: v1
 kind: Service
