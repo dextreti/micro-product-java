@@ -20,7 +20,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 @Entity 
-@Table(name = "Category")
+@Table(name = "category", schema = "product_catalog")
 public class Category {
     @Id
     private String id;
